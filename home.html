@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>Oficina de Integração</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<script src="_js/bannercarousel.js" defer></script>
+<style>
+:root{
+    --color-blue1: #003090;
+    --color-blue2: #0b56a4;
+    --color-blue3: #112a45;
+    --color-fox1: #ba7c00;
+    --color-fox2: #dca900;
+    --color-bg: rgb(248, 248, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+    background-color: var(--color-blue2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 2px gray;
+    width: 100vw;
+    height: 75px;
+    min-height: 75px;
+    padding: 0.5%;
+    top: 0px;
+    z-index: 100;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img#logo_header{
+    max-height: 65px;
+    max-width: 65px;
+    margin: 40px;
+}
+
+.txtheader{
+    margin: 40px;
+    padding: 20px;
+
+}
+
+.txtheader:hover{
+    transition: .5s;
+    background-color: var(--color-blue1);
+    border-radius: 20px;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+/* Banner */
+
+.banner{
+    padding-top: 80px;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(145, 180, 255) 0%, rgba(0,0,0,0) 100%);
+    box-shadow: 1px 1px 5px rgb(172, 172, 172);
+}
+.slider{
+    margin: 0 auto;
+    max-height: 1000px;
+    width: 1000px;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+    height: 600px;
+    width: 400%;  
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+    transition: .75s;
+}
+.slide img{
+    width: 1000px;
+}
+.manualNavigation{
+    position: absolute;
+    width: 1000px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+}
+.manualBtn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.manualBtn:not(:last-child){
+    margin-right: 40px;
+}
+.manualBtn:hover{
+    background-color: white;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+.navigationAuto div{
+    border: 2px solid yellow;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.navigationAuto{
+    position: absolute;
+    width: 1000px;
+    margin-top: 570px;
+    display: flex;
+    justify-content: center;
+}
+.navigationAuto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigationAuto .autoBtn1{
+    background-color: white;
+}
+#radio2:checked ~ .navigationAuto .autoBtn2{
+    background-color: white;
+}
+#radio3:checked ~ .navigationAuto .autoBtn3{
+    background-color: white;
+}
+
+/* História */
+
+.histHome::before{
+    position: absolute;
+    border-top: 3px solid var(--color-fox2);
+    content: "";
+    width: 900px;
+    margin-left: 475px;
+    border-radius: 8px;
+}
+.histh1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    padding-top: 75px;
+    margin-top: 75px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15vw;
+    color: var(--color-blue3)
+}
+.histp{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5vw;
+    color: var(--color-blue3);
+    height: auto;
+    width: 42vw;
+}
+#botHomeHist{
+    margin-top: 100px;
+    padding-left: 600px;
+    padding-right: 20px;
+    height: 50px;
+    background-color: var(--color-blue1);
+    color: var(--color-fox2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 1px 1px 2px black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+#botHomeHist:hover{
+    background-color: var(--color-blue2);
+}
+
+/* Membro Fox */
+
+.membrosHome::before{
+    position: absolute;
+    border-top: 3px solid var(--color-fox2);
+    content: "";
+    width: 900px;
+    margin-left: 475px;
+    border-radius: 8px;
+}
+.membrosh1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    padding-top: 75px;
+    margin-top: 75px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15vw;
+    color: var(--color-blue3)
+}
+.membrosp{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5vw;
+    color: var(--color-blue3);
+    height: auto;
+    width: 42vw;
+}
+.vantagens{
+    display: grid;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px grey;
+    height: 600px;
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 50px;
+    min-width: 400px;
+    overflow: hidden;
+}
+.vantHeader{
+    width: 100%;
+    height: 315px;
+    overflow: hidden;
+}
+#membroFox{
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+}
+.vantagens h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-top: -15px;
+    cursor: default;
+}
+.vantagens li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black; 
+    text-align: center;
+    padding: 10px;
+    cursor: default;
+}
+#botMembro{
+    height: 50px;
+    width: 200px;
+    margin-left: 27.5%;
+    border-color: var(--color-blue1);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    color: var(--color-blue1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+}
+#botMembro:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+/* Titulos */
+
+.tituHome::before{
+    position: absolute;
+    border-top: 3px solid var(--color-fox2);
+    content: "";
+    width: 900px;
+    margin-left: 475px;
+    border-radius: 8px;
+}
+.tituh1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    padding-top: 75px;
+    margin-top: 75px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15vw;
+    color: var(--color-blue3)
+}
+.copaDIng{
+    margin-left: 10vw;
+    margin-top: 150px;
+    padding-top: 20px;
+    width: 300px;
+    display: grid;
+    place-items: center;
+    border-top: 4px solid var(--color-blue2);
+}
+#trofeuDIng{
+    max-height: 250px;
+}
+#textoDIng h1{
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+}
+#textoDIng p{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.PLeague{
+    margin-left: 40vw;
+    margin-top: -400px;
+    padding-top: 20px;
+    width: 300px;
+    display: grid;
+    place-items: center;
+    border-top: 4px solid var(--color-blue2);
+}
+#trofeuPL{
+    max-height: 250px;
+}
+#textoPL h1{
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+}
+#textoPL p{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.CopaLI{
+    margin-left: 70vw;
+    margin-top: -302px;
+    padding-top: 20px;
+    width: 300px;
+    display: grid;
+    place-items: center;
+    border-top: 4px solid var(--color-blue2);
+}
+#trofeuCLI{
+    max-height: 250px;
+}
+#textoCLI h1{
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+}
+#textoCLI p{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+#botTitulos{
+    margin-top: 100px;
+    padding-left: 600px;
+    padding-right: 20px;
+    height: 50px;
+    background-color: var(--color-blue1);
+    color: var(--color-fox2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 1px 1px 2px black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+#botTitulos:hover{
+    background-color: var(--color-blue2);
+}
+
+/* Temporada 15-16 */
+
+.tempHome::before{
+    position: absolute;
+    border-top: 3px solid var(--color-fox2);
+    content: "";
+    width: 900px;
+    margin-left: 475px;
+    border-radius: 8px;
+}
+.tempHome h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    padding-top: 75px;
+    margin-top: 75px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15vw;
+    color: var(--color-blue3)
+}
+.tempHome p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5vw;
+    color: var(--color-blue3);
+    height: auto;
+    width: 42vw;
+}
+.tempHome img{
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left: 100px;
+    max-width: 600px;
+}
+.contTempHome{
+    display: flex;
+}
+#botTemp{
+    margin-top: 35px;
+    padding-left: 600px;
+    padding-right: 20px;
+    height: 50px;
+    background-color: var(--color-blue1);
+    color: var(--color-fox2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 1px 1px 2px black;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+#botTemp:hover{
+    background-color: var(--color-blue2);
+}
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: var(--color-blue2);
+    box-shadow: 1px 1px 4px gray;
+    width: 100%;
+    height: 300px;
+}
+
+.divMaior{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 200px;
+}
+.divMenor1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.divMenor2{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#logo_footer{
+    max-height: 100px;
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.logos_sm{
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px black;
+    margin: 10px 5px;
+}
+
+.txtfooter{
+    color: rgb(218, 218, 218);
+    margin: 15px 0;
+    font-weight:lighter;
+}
+
+.txtfooter:hover{
+    transition: .3s;
+    color: white;
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    
+    <header>
+        <a href="http://localhost:8030"><img id="logo_header" src="./imagens/logo.png"></a>
+        <div class="navheader" id="navheader">
+            <a class="txtheader" href="http://localhost:8030/historia"target="_blank">História</a>
+            <a class="txtheader" href="http://localhost:8030/titulo"target="_blank">Títulos</a>
+            <a class="txtheader" href="http://localhost:8030/temporada"target="_blank">Temporada 15/16</a>
+            <a class="txtheader" href="http://localhost:8030/login"target="_blank">Membros</a>
+        </div>
+    </header>
+
+    <div class="banner">
+    <div class="slider">
+
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img class="carrossel" src="./imagens/banner.jpg"/>
+            </div>
+            <div class="slide">
+                <img class="carrossel" src="./imagens/estadio1.jpg"/>
+            </div>
+            <div class="slide">
+                <img class="carrossel" src="./imagens/titulopl1.jpg"/>
+            </div>
+
+            <div class="navigationAuto">
+                <div class="autoBtn1"></div>
+                <div class="autoBtn2"></div>
+                <div class="autoBtn3"></div>
+            </div>
+
+        </div>
+
+        <div class="manualNavigation">
+            <label for="radio1" class="manualBtn"></label>
+            <label for="radio2" class="manualBtn"></label>
+            <label for="radio3" class="manualBtn"></label>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="histHome">
+        <h1 class="histh1">História</h1>
+        <p class="histp">Leicester City Football Club (LCFC) é um time centenário que atualmente participa da liga inglesa de futebol (Premier League) e que, apesar de não ser um time de grande relevância e
+            não estar entre os maiores do país, foi protagonista de um título inédito e improvável na temporada de 2015/2016.<br/>
+            Conheça mais sobre seu passado e os detalhes que o levou a conquistar esse feito.<br/>
+        </p>
+        <a id="botaoHomeHist" href="http://localhost:8030/historia"target="_blank"><button id="botHomeHist">
+            DESCUBRA
+        </button></a>
+    </div>
+
+    <div class="membrosHome">
+        <h1 class="membrosh1">Seja Foxer</h1>
+        <p class="membrosp">Cadastre-se agora para se tornar um Membro Fox!</p>
+
+        <div class="vantagens">
+            <div class="vantHeader">
+                <img id="membroFox" src="./imagens/foxMember.jpg"/>
+            </div>
+            <h1>Vantagens</h1>
+            <ul>
+                <li>Linha do tempo interativa</li>
+                <li>Starting 11</li>
+            </ul>
+            <a href="http://localhost:8030" target="_blank">
+                <button id="botMembro">CADASTRE-SE/ENTRE</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="tituHome">
+        <h1 class="tituh1">Titulos</h1>
+        <div class="copaDIng">
+            <div id="imgDIng">
+                <img id="trofeuDIng" src="./imagens/trofeuDIng.png"/>
+            </div>
+            <div id="textoDIng">
+                <h1>Copa da Inglaterra</h1>
+                <p>2020-21</p>
+            </div>
+        </div>
+        <div class="PLeague">
+            <div id="imgPL">
+                <img id="trofeuPL" src="./imagens/trofeuPL.png"/>
+            </div>
+            <div id="textoPL">
+                <h1>Premiere League</h1>
+                <p>2015-16</p>
+            </div>
+        </div>
+        <div class="CopaLI">
+            <div id="imgCLI">
+                <img id="trofeuCLI" src="./imagens/trofeuCLI.png"/>
+            </div>
+            <div id="textoCLI">
+                <h1>Copa da Liga Inglesa</h1>
+                <p>1963-64, 1996-97 e 1999-00</p>
+            </div>
+        </div>
+        <a id="botaoTitulos" href="http://localhost:8030/titulo"target="_blank"><button id="botTitulos">
+            SAIBA MAIS
+        </button></a>
+
+    </div>
+
+    <div class="tempHome">
+        <h1>Temporada 15-16</h1>
+        <div class="contTempHome">
+            <p>Foi na temporada de 2015-16 que Leicester City marcou o seu nome na história, conquistando pela primeira vez o título de campeão inglês.</br>
+            Jogadores hoje mais conhecidos como: Riyad Mahrez, N'Golo Kanté e Jamie Vardy ajudaram o time durante essa jornada.</p>
+            <img id="tempHomeIMG" src="./imagens/tempHomeIMG.png"/>
+        </div>
+        <a id="botaoTemp" href="http://localhost:8030/temporada"target="_blank"><button id="botTemp">
+            SAIBA MAIS
+        </button></a>
+    </div>
+
+
+
+    <footer>
+        <div class="divMaior">
+            <div class="divMenor1">
+                <img id="logo_footer" src="./imagens/logo.png"/>
+                <div class="divMenor3">
+                    <a class="lfooter" href="https://www.facebook.com/lcfc"><img class="logos_sm" src="./imagens/fbLogo.png"></a>
+                    <a class="lfooter" href="https://www.youtube.com/user/LCFCOfficial"><img class="logos_sm" src="./imagens/ytLogo.png"></a>
+                    <a class="lfooter" href="https://twitter.com/lcfc"><img class="logos_sm" src="./imagens/ttLogo.png"></a>
+                    <a class="lfooter" href="https://www.instagram.com/lcfc/?hl=en"><img class="logos_sm" src="./imagens/igLogo.png"></a>
+                </div>
+            </div>
+            
+            <div class="divMenor2">
+                <a class="txtfooter" href="http://localhost:8030/historia" target="_blank" >História</a>
+                <a class="txtfooter" href="http://localhost:8030/titulo " target="_blank">Títulos</a>
+                <a class="txtfooter" href="http://localhost:8030/temporada" target="_blank">Temporada 15/16</a>
+                <a class="txtfooter" href="http://localhost:8030/login"target="_blank" >Membros</a>
+            </div>
+        </div>
+    </footer>
+   
+</body>

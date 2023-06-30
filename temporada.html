@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>Oficina de Integração</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<script src="_js/bannercarousel.js"></script>
+<style>
+
+@charset "UTF-8";
+header{
+    position: fixed;
+    background-color: var(--color-blue2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 2px gray;
+    width: 100vw;
+    height: 75px;
+    min-height: 75px;
+    padding: 0.5%;
+    top: 0px;
+    z-index: 100;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img#logo_header{
+    max-height: 65px;
+    max-width: 65px;
+    margin: 40px;
+}
+
+.txtheader{
+    margin: 40px;
+    padding: 20px;
+
+}
+
+.txtheader:hover{
+    transition: .5s;
+    background-color: var(--color-blue1);
+    border-radius: 20px;
+}
+
+
+:root{
+    --color-blue1: #003090;
+    --color-blue2: #0b56a4;
+    --color-blue3: #112a45;
+    --color-fox1: #ba7c00;
+    --color-fox2: #dca900;
+    --color-bg: rgb(248, 248, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 80px;
+    background-color: var(--color-bg);
+}
+
+.container{
+    display: grid;
+    margin: 200px auto;
+}
+.sec1{
+    display: flex;
+    margin-bottom: 200px;
+}
+.sec1 img{
+    max-height: 1240px;
+    max-width: 720px;
+    margin-left: 75px;
+    margin-right: 35px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px black;
+}
+.sec1 p{
+    color: var(--color-blue3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin: 30px 30px 0 0;
+    padding-bottom: 50px;
+}
+
+.sec2{
+    display: flex;
+    margin-bottom: 200px;
+}
+.sec2 img{
+    max-height: 1240px;
+    max-width: 720px;
+    margin-right: 30px;
+    box-shadow: 1px 1px 8px black;
+    border-radius: 5px;
+}
+.sec2 p{
+    color: var(--color-blue3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 75px;
+    margin-right: 35px;
+    padding-bottom: 50px;
+}
+
+.sec3 img{
+    display: block;
+    max-height: 1920px;
+    max-width: 1024px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 8px black;
+    border-radius: 5px;
+}
+.sec3 p{
+    text-align: center;
+    color: var(--color-blue3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin: 50px 100px 0 100px;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: var(--color-blue2);
+    box-shadow: 1px 1px 4px gray;
+    width: 100%;
+    height: 300px;
+}
+
+.divMaior{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 200px;
+}
+.divMenor1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.divMenor2{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#logo_footer{
+    max-height: 100px;
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.logos_sm{
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 2px black;
+    margin: 10px 5px;
+}
+
+.txtfooter{
+    color: rgb(218, 218, 218);
+    margin: 15px 0;
+    font-weight:lighter;
+}
+
+.txtfooter:hover{
+    transition: .3s;
+    color: white;
+    text-decoration: underline;
+}
+</style>
+<body>
+    <header>
+        <a href="http://localhost:8030"><img id="logo_header" src="./imagens/logo.png"/></a>
+        <div class="navheader" id="navheader">
+            <a class="txtheader" href="http://localhost:8030/historia"target="_blank">História</a>
+            <a class="txtheader" href="http://localhost:8030/titulo"target="_blank">Títulos</a>
+            <a class="txtheader" href="http://localhost:8030/temporada"target="_blank">Temporada 15/16</a>
+            <a class="txtheader" href="http://localhost:8030/login"target="_blank">Membros</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sec1">
+            <img src="./imagens/pagTitKP.jpg" class="imagem1"/>
+                <div class="textos1">
+                     <p>O preparo para o que viria a se tornar a temporada mágica do clube começou alguns anos antes, por volta de 2010 na era Vichai Srivaddhanaprabha, quando o time conseguiu investimentos que ajudariam a reconstruir e moldar seu futuro.</p>
+                     <p>Com o investimento, o time foi campeão da segunda divisão na temporada de 2013-14 mas ao chegar na primeira divisão (Premier League) quase foram rebaixados na mesma temporada (2014-15), se salvando por conta de um final de temporada memorável que viria a ficar conhecido na Inglaterra como "The Great Escape".</p>
+                </div>
+        </div>
+        <div class="sec2">
+                <div class="textos1">
+                     <p>Chegando na temporada 2015-16 com o time mais barato dentre os que se mantiveram na liga, as casas de apostas de London avaliavam a chance de Leicester vencer a Premier League em 2500 para 1 e os agentes de apostas britânicos avaliavam em 5000 para 1. Em parâmetro, quando o boxeador Buster Douglas chocou o mundo e nocauteou Mike Tyson em 1990, era desfavorecido em 42 para 1.</p>
+                     <p>Contando com mais reforços como o jovem N'Golo Kanté, Leicester assumiu a ponta da tabela logo na segunda rodada do campeonato e se manteve firme por várias rodadas, mesmo com um elenco sem estrelas. A este ponto, alguns jogadores ja se destacavam, como o artilheiro Jamie Vardy que marcou gols em 11 jogos consecutivos, quebrando o antigo recorde de Van Nistelrooy.</p>
+                </div>
+                <img src="./imagens/pagTitTab.png" class="imagem1"/>
+        </div>
+        <div class="sec1">
+            <img src="./imagens/pagTitSquad.jpg" class="imagem1"/>
+                <div class="textos1">
+                     <p>Surpreendendo a muitos (inclusive a própria diretoria do time), Leicester foi de lanterna do campeonato para líder de uma temporada para a outra, coisa que não acontecia em aproximadamente 30 anos.</p>
+                     <p>Um elenco sem estrelas mas muito talentoso e eficiente liderado pelo técnico Claudio Ranieri fizeram história e faltando 6 rodadas para o fim do campeonato, eram o líder com maior folga dentre os quatro grandes campeonatos da europa. No dia 2 de maio de 2016, com o empate entre Chelsea e o vice-líder do campeonato Tottenham Hotspur por 2 a 2, Leicester City se consagrou campeão da Premiere League pela primeira vez em sua história.</p>
+                </div>
+        </div>
+        <div class="sec3">
+            <img src="./imagens/pagTitPrem.jpg" class="imag">
+            <p>Ao fim da temporada, Leicester saiu com o título da Premier League além de diversos títulos individuais: Jamie Vardy conquistou o título de Futebolista Inglês do Ano pela FWA e o de Melhor Jogador do Campeonato Inglês; Riyad Mahrez o de Futebolista Inglês do Ano pela PFA; Claudio Ranieri conquistou o prêmio de Melhor Treinador do Campeonato Inglês de 2015-16 e Melhor Treinador do Mundo 2016 pela Fifa, dentre outros.</p>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="divMaior">
+            <div class="divMenor1">
+                <img id="logo_footer" src="imagens/logo.png"/>
+                <div class="divMenor3">
+                    <a class="lfooter" href="https://www.facebook.com/lcfc"><img class="logos_sm" src="imagens/fbLogo.png"></a>
+                    <a class="lfooter" href="https://www.youtube.com/user/LCFCOfficial"><img class="logos_sm" src="imagens/ytLogo.png"></a>
+                    <a class="lfooter" href="https://twitter.com/lcfc"><img class="logos_sm" src="imagens/ttLogo.png"></a>
+                    <a class="lfooter" href="https://www.instagram.com/lcfc/?hl=en"><img class="logos_sm" src="imagens/igLogo.png"></a>
+                </div>
+            </div>
+            
+            <div class="divMenor2">
+                <a class="txtfooter" href="http://localhost:8030/historia"target="_blank">História</a>
+                <a class="txtfooter" href="http://localhost:8030/titulo"target="_blank">Títulos</a>
+                <a class="txtfooter" href="http://localhost:8030/temporada"target="_blank">Temporada 15/16</a>
+                <a class="txtfooter" href="http://localhost:8030/login"target="_blank">Membros</a>
+            </div>
+        </div>
+    </footer>
+   
+</body>
